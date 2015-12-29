@@ -1,0 +1,25 @@
+package RestTutorial.dao;
+import java.sql.*;
+
+
+
+public class tube308 {
+		public static ResultSet rs;
+		public static Connection connection;
+		public static ResultSet query(String q) {
+			try {
+				Class.forName("com.mysql.jdbc.Driver");
+				connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/project", "root", "910307");
+				Statement statement = connection.createStatement();
+				rs = statement.executeQuery(q);
+				//connection.close();
+			} catch (ClassNotFoundException | SQLException e) {
+				e.printStackTrace();
+			}
+			
+			
+			return rs;
+		}
+		
+	
+}

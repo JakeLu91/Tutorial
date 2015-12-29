@@ -1,0 +1,23 @@
+package RestTutorial.dao;
+import java.sql.*;
+import java.util.ArrayList;
+
+
+public class tube308 {
+		
+		public static ArrayList<ArrayList<String>> query(String q) {
+			try {
+				Class.forName("com.mysql.jdbc.Driver");
+				Connection connection = DriverManager.getConnection("jdbc:mysql://localhost/project", "root", "910307");
+				Statement statement = connection.createStatement();
+				
+			} catch (ClassNotFoundException | SQLException e) {
+				e.printStackTrace();
+			}
+			
+			
+			return null;
+		}
+		
+	
+}

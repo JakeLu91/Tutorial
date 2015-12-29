@@ -1,0 +1,20 @@
+package RestTutorial.util;
+
+import org.codehaus.jettison.json.JSONException;
+import org.codehaus.jettison.json.JSONObject;
+
+public class Test {
+	public static void main(String[] args) {
+		String url = "http://localhost:8080/RestTutorial/api/imageURL?id=--3iH7ezDwTGn5lolFMdhg";
+		JSONObject j = new JSONObject();
+		try {
+			j.put("a", url);
+		} catch (JSONException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		System.out.println(url);
+	
+	}
+}

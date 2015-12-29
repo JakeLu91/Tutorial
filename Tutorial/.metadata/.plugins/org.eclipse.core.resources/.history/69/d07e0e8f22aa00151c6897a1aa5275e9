@@ -1,0 +1,11 @@
+package RestTutorial.status;
+import javax.ws.rs.*;
+import javax.ws.rs.core.MediaType;
+@Path("/a")
+public class test {
+	@GET
+	@Produces(MediaType.TEXT_HTML)
+	public String aa() {
+		return ".....";
+	}
+}

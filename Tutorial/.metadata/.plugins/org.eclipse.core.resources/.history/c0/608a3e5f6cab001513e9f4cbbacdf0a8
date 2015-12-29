@@ -1,0 +1,23 @@
+package RestTutorial.status;
+import javax.ws.rs.*;
+import javax.ws.rs.core.*;
+import org.codehaus.jettison.json.JSONArray;
+import org.codehaus.jettison.json.JSONObject;
+
+import RestTutorial.dao.tube308;
+
+@Path("/v4/members")
+
+public class V4_members {
+	
+	@Path("/{uname}")
+	@DELETE
+	@Consumes({MediaType.APPLICATION_FORM_URLENCODED, MediaType.APPLICATION_JSON})
+	@Produces(MediaType.APPLICATION_JSON)
+	public Response deleteItem(@PathParam("uname") String uname,
+								String incomingData) throws Exception {
+		
+		
+		
+	}
+}

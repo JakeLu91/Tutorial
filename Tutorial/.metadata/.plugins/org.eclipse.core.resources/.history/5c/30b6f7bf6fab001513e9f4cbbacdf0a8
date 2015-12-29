@@ -1,0 +1,16 @@
+package RestTutorial.status;
+
+
+import javax.ws.rs.*;
+import javax.ws.rs.core.Cookie;
+import javax.ws.rs.core.Response;
+@Path("/test")
+public class test {
+	public Response getCookie(@CookieParam("access") Cookie cookie) {
+		
+		String returnString = "sss";
+		
+		
+		return Response.ok(returnString).build();
+	}
+}

@@ -1,0 +1,28 @@
+package RestTutorial.status;
+import java.sql.SQLException;
+
+import javax.ws.rs.*;
+import javax.ws.rs.core.MediaType;
+
+import RestTutorial.dao.tube308;
+import RestTutorial.util.MembersToJson;
+
+@Path("/members")
+public class V1_members {
+	
+	@GET
+	@Produces(MediaType.APPLICATION_JSON)
+	public String returnAllMembers() {
+		try {
+			MembersToJson mtj = new MembersToJson();
+			return mtj.toJSONArray(tube308.query("select * from members")).toString();
+		} finally {
+			try {
+				tube308.connection.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		
+	}
+}

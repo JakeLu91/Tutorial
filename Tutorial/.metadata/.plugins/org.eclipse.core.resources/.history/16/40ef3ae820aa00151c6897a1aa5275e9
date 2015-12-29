@@ -1,0 +1,13 @@
+package RestTutorial.status;
+import javax.ws.rs.*;
+import javax.ws.rs.core.MediaType;
+
+@Path("/members")
+public class V1_members {
+	
+	@GET
+	@Produces(MediaType.APPLICATION_JSON)
+	public String returnAllMembers() {
+		
+	}
+}

@@ -1,0 +1,5 @@
+package RestTutorial.util;
+
+public class MembersToJson {
+
+}

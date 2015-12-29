@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.sql.ResultSetMetaData"/>
+<fullyQualifiedTypeName name="RestTutorial.util.MembersToJson"/>
+<fullyQualifiedTypeName name="java.sql.Connection"/>
+<fullyQualifiedTypeName name="java.sql.ResultSet"/>
+<fullyQualifiedTypeName name="java.sql.Types"/>
+<fullyQualifiedTypeName name="sun.util.logging.PlatformLogger.Level"/>
+<fullyQualifiedTypeName name="com.sun.javafx.logging.Logger"/>
+<fullyQualifiedTypeName name="java.util.logging.Logger"/>
+<fullyQualifiedTypeName name="java.util.logging.Level"/>
+<fullyQualifiedTypeName name="org.json.simple.parser.JSONParser"/>
+<fullyQualifiedTypeName name="java.lang.Object"/>
+<fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+<fullyQualifiedTypeName name="javax.ws.rs.Consumes"/>
+<fullyQualifiedTypeName name="javax.ws.rs.PathParam"/>
+<fullyQualifiedTypeName name="java.lang.Exception"/>
+<fullyQualifiedTypeName name="javax.ws.rs.core.MediaType"/>
+<fullyQualifiedTypeName name="org.codehaus.jettison.json.JSONArray"/>
+<fullyQualifiedTypeName name="RestTutorial.dao.tube308"/>
+<fullyQualifiedTypeName name="org.codehaus.jettison.json.JSONObject"/>
+<fullyQualifiedTypeName name="javax.ws.rs.CookieParam"/>
+<fullyQualifiedTypeName name="javax.ws.rs.core.Cookie"/>
+<fullyQualifiedTypeName name="javax.ws.rs.core.Response"/>
+</qualifiedTypeNameHistroy>

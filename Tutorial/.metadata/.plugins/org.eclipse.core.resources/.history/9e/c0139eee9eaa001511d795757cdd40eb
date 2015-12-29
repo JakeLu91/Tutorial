@@ -1,0 +1,64 @@
+package RestTutorial.dao;
+import java.sql.*;
+
+import org.codehaus.jettison.json.JSONArray;
+
+import RestTutorial.util.ToJSON;
+
+
+
+public class tube308 {
+		private ResultSet rs;
+		private Connection connection;
+		
+		public JSONArray queryAllFromMembers() {
+			
+			ToJSON mtj = new ToJSON();
+			
+			try {
+				Class.forName("com.mysql.jdbc.Driver");
+				connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/project", "root", "910307");
+				Statement statement = connection.createStatement();
+				rs = statement.executeQuery("select * from members");
+				//connection.close();
+			} catch (ClassNotFoundException | SQLException e) {
+				e.printStackTrace();
+			}
+			return mtj.toJSONArray(rs);
+		}
+		
+		public JSONArray queryImageURLByID(String id) {
+			ToJSON mtj = new ToJSON();
+			try {
+				Class.forName("com.mysql.jdbc.Driver");
+				connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/project", "root", "910307");
+				
+				PreparedStatement query = connection.prepareStatement("select * from imageUrl where id='?'");
+				query.setString(1, id.toUpperCase());
+				ResultSet rs = query.executeQuery();
+				
+				
+				
+				
+				//connection.close();
+			} catch (ClassNotFoundException | SQLException e) {
+				e.printStackTrace();
+			}
+			return mtj.toJSONArray(rs);
+		}
+		
+		public ResultSet getRS() {
+			return rs;
+		}
+		
+		public void closeConnection() {
+			try {
+				connection.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		
+	
+}

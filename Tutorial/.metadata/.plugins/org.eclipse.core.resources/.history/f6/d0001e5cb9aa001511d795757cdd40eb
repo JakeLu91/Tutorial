@@ -1,0 +1,24 @@
+package RestTutorial.status;
+import javax.ws.rs.*;
+import javax.ws.rs.core.*;
+
+import org.codehaus.jettison.json.JSONArray;
+
+@Path("/imageURL")
+public class V1_imageURL {
+	@GET
+	@Produces(MediaType.APPLICATION_JSON)
+	public Response returnImageURL(@QueryParam("id") String id) {
+		String returnString = null;
+		JSONArray json = new JSONArray();
+		
+		try {
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+			return Response.status(500).entity("Server was not able to process your request").build();
+		}
+		
+		return Response.ok(returnString).build();
+	}
+}

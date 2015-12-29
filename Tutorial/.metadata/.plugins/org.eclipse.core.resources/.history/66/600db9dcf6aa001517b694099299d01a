@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script>
+document.getElementById("date").innerHTML = Date();
+</script>
+</head>
+<body>
+<form enctype='application/json' action="/RestTutorial/api/v2/members" method="POST">
+  <input name='id' type="text">
+  <input name='fname' type="text">
+  <input name='lname' type="text">
+  <input name='email' type="text">
+  <input name='uname' type="text">
+  <input name='pass' type="text">
+  <input name='date' type="hidden" value="2009-03-07">
+  <input type="submit">
+</form>
+
+
+</body>
+</html>

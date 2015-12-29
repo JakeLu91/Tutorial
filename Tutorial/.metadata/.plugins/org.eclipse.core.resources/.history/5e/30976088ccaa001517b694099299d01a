@@ -1,0 +1,34 @@
+package RestTutorial.status;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+import javax.ws.rs.*;
+import javax.ws.rs.core.*;
+
+import org.codehaus.jettison.json.JSONArray;
+
+import RestTutorial.dao.tube308;
+
+@Path("/imageURL")
+public class V1_imageURL {
+	
+	private static final Logger LOGGER = Logger.getLogger(tube308.class.getName());
+	@GET
+	@Produces(MediaType.APPLICATION_JSON)
+	public Response returnImageURL(@QueryParam("id") String id) {
+		String returnString = null;
+		JSONArray json = new JSONArray();
+		
+		try {
+			tube308 dao = new tube308();
+			json = dao.queryImageURLByID(id);
+			returnString = json.toString();
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+			return Response.status(500).entity("Server was not able to process your request").build();
+		}
+		
+		return Response.ok(returnString).build();
+	}
+}

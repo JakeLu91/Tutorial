@@ -1,0 +1,43 @@
+package RestTutorial.status;
+
+import java.util.logging.Logger;
+
+import javax.ws.rs.*;
+import javax.ws.rs.core.*;
+
+import org.codehaus.jettison.json.JSONArray;
+import org.codehaus.jettison.json.JSONException;
+import org.codehaus.jettison.json.JSONObject;
+
+import RestTutorial.dao.tube308;
+
+@Path("/v2/members")
+public class V2_members {
+	@POST
+	@Consumes({MediaType.APPLICATION_FORM_URLENCODED, MediaType.APPLICATION_JSON})
+	@Produces(MediaType.APPLICATION_JSON)
+	public Response addMember(String incomingData) {
+		String returningString = null;
+		JSONObject data = null;
+		JSONArray json = null;
+		tube308 dao = new tube308();
+		
+		try {
+			data = new JSONObject(incomingData);
+			System.out.println("JSON DATA: " + data.toString());
+			int http_code = dao.insertIntoMembers(data.optInt("id"),
+												data.optString("fname"),
+												data.optString("lname"),
+												data.optString("email"),
+												data.optString("uname"),
+												data.optString("pass"),
+												data.optString("date"));
+		} catch (JSONException e) {
+			
+			e.printStackTrace();
+		}
+		
+		
+		return Response.ok(returningString).build();
+	}
+}

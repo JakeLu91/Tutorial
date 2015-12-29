@@ -1,0 +1,21 @@
+package RestTutorial.status;
+import javax.ws.rs.*;
+import javax.ws.rs.core.MediaType;
+
+import RestTutorial.dao.tube308;
+
+@Path("/members")
+public class V1_members {
+	
+	@GET
+	@Produces(MediaType.APPLICATION_JSON)
+	public String returnAllMembers() {
+		tube308 t = new tube308();
+		try {
+			return t.queryAllFromMembers().toString();
+		} finally {
+			t.closeConnection();
+		}
+		
+	}
+}
